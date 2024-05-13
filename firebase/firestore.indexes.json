@@ -1,0 +1,288 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "calendrier",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "indxJ",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "match",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "isLive",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "dateMatch",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "senior",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champ_info.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champ_info.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U19",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champInfo19.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champInfo19.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U17",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champInfo17.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champInfo17.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U15",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champInfo15.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champInfo15.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U13",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champinfo13.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champinfo13.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U19",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champInfo19.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champInfo19.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U17",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champInfo17.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champInfo17.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U15",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champInfo15.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champInfo15.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "U13",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champinfo13.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champinfo13.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "champ_info.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champ_info.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "fcm_tokens",
+      "fieldPath": "fcm_token",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    }
+  ]
+}
