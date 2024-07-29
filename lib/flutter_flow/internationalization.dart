@@ -1080,16 +1080,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // matchDayLive
   {
-    'urpwdhhh': {
-      'fr': 'web view',
-      'ar': 'عرض الويب',
-      'en': 'web view',
-    },
-    '9u8xgifm': {
-      'fr': 'youtube',
-      'ar': 'موقع YouTube',
-      'en': 'Youtube',
-    },
     'sdq2mob9': {
       'fr': 'MATCH DAY',
       'ar': 'يوم المباراة',
@@ -1538,7 +1528,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zd8y9vwx': {
       'fr': 'GROUPE 03',
       'ar': 'المجموعة 03',
-      'en': 'GROUP 03',
+      'en': 'GROUPE 03',
     },
     'f0spx9qt': {
       'fr': 'GROUPE 04',

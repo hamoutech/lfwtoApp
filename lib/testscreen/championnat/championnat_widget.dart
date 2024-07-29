@@ -509,6 +509,7 @@ class _ChampionnatWidgetState extends State<ChampionnatWidget> {
                                       containerPubsRecordList.isNotEmpty
                                           ? containerPubsRecordList.first
                                           : null;
+
                                   return Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.92,

@@ -263,6 +263,28 @@
           "order": "ASCENDING"
         },
         {
+          "fieldPath": "champinfo13.points",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "champinfo13.diff",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Equipes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "division",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "groupe",
+          "order": "ASCENDING"
+        },
+        {
           "fieldPath": "champ_info.points",
           "order": "DESCENDING"
         },

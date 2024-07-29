@@ -773,6 +773,7 @@ class _CalendrierWidgetState extends State<CalendrierWidget> {
                                   List<CalendrierRecord>
                                       calendarListViewCalendrierRecordList =
                                       snapshot.data!;
+
                                   return ListView.separated(
                                     padding: const EdgeInsets.fromLTRB(
                                       0,
@@ -852,6 +853,7 @@ class _CalendrierWidgetState extends State<CalendrierWidget> {
                                                       calendarListViewCalendrierRecord
                                                           .listMatch
                                                           .toList();
+
                                                   return SingleChildScrollView(
                                                     scrollDirection:
                                                         Axis.horizontal,

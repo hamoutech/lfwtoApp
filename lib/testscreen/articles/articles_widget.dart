@@ -74,7 +74,9 @@ class _ArticlesWidgetState extends State<ArticlesWidget> {
                           ),
                         );
                       }
+
                       final articleContainerArticlesRecord = snapshot.data!;
+
                       return Container(
                         width: double.infinity,
                         height: double.infinity,

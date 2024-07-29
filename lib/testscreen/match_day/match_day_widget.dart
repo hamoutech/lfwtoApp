@@ -34,9 +34,8 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      setState(() {
-        FFAppState().currentDate = functions.getDayDate();
-      });
+      FFAppState().currentDate = functions.getDayDate();
+      setState(() {});
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -241,7 +240,7 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                   ),
                                           singleRecord: true,
                                         ),
-                                      )..listen((snapshot) async {
+                                      )..listen((snapshot) {
                                           List<MatchRecord>
                                               matchregarderMatchRecordList =
                                               snapshot;
@@ -259,38 +258,42 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                       matchregarderMatchRecordList,
                                                       _model
                                                           .matchregarderPreviousSnapshot)) {
-                                            if (matchregarderMatchRecord
-                                                    ?.isLive ==
-                                                true) {
-                                              _model.teamA = await EquipesRecord
-                                                  .getDocumentOnce(
-                                                      matchregarderMatchRecord!
-                                                          .teamA!);
-                                              _model.teamB = await EquipesRecord
-                                                  .getDocumentOnce(
-                                                      matchregarderMatchRecord
-                                                          .teamB!);
-                                              triggerPushNotification(
-                                                notificationTitle: 'MATCH DAY',
-                                                notificationText:
-                                                    'Regardez le match du ${_model.teamA?.nameAbreviation} VS ${_model.teamB?.nameAbreviation}',
-                                                notificationSound: 'default',
-                                                userRefs: [
-                                                  currentUserReference!
-                                                ],
-                                                initialPageName: 'matchDayLive',
-                                                parameterData: {
-                                                  'link':
-                                                      matchregarderMatchRecord
-                                                          .linkMatch,
-                                                  'youtubeLink':
-                                                      matchregarderMatchRecord
-                                                          .youtubeLink,
-                                                },
-                                              );
-                                            }
+                                            () async {
+                                              if (matchregarderMatchRecord
+                                                      ?.isLive ==
+                                                  true) {
+                                                _model.teamA = await EquipesRecord
+                                                    .getDocumentOnce(
+                                                        matchregarderMatchRecord!
+                                                            .teamA!);
+                                                _model.teamB = await EquipesRecord
+                                                    .getDocumentOnce(
+                                                        matchregarderMatchRecord
+                                                            .teamB!);
+                                                triggerPushNotification(
+                                                  notificationTitle:
+                                                      'MATCH DAY',
+                                                  notificationText:
+                                                      'Regardez le match du ${_model.teamA?.nameAbreviation} VS ${_model.teamB?.nameAbreviation}',
+                                                  notificationSound: 'default',
+                                                  userRefs: [
+                                                    currentUserReference!
+                                                  ],
+                                                  initialPageName:
+                                                      'matchDayLive',
+                                                  parameterData: {
+                                                    'link':
+                                                        matchregarderMatchRecord
+                                                            .linkMatch,
+                                                    'youtubeLink':
+                                                        matchregarderMatchRecord
+                                                            .youtubeLink,
+                                                  },
+                                                );
+                                              }
 
-                                            setState(() {});
+                                              setState(() {});
+                                            }();
                                           }
                                           _model.matchregarderPreviousSnapshot =
                                               snapshot;
@@ -325,6 +328,7 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                 ? matchregarderMatchRecordList
                                                     .first
                                                 : null;
+
                                         return Material(
                                           color: Colors.transparent,
                                           elevation: 30.0,
@@ -503,9 +507,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe1EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -724,9 +730,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe2EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -1049,6 +1057,7 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                               List<MatchRecord>
                                                   listematchseniorMatchRecordList =
                                                   snapshot.data!;
+
                                               return SingleChildScrollView(
                                                 scrollDirection:
                                                     Axis.horizontal,
@@ -1159,9 +1168,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe1EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -1254,9 +1265,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe2EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -1576,6 +1589,7 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                               List<MatchRecord>
                                                   listematchsu19MatchRecordList =
                                                   snapshot.data!;
+
                                               return SingleChildScrollView(
                                                 scrollDirection:
                                                     Axis.horizontal,
@@ -1686,9 +1700,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe1EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -1781,9 +1797,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe2EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -2106,6 +2124,7 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                               List<MatchRecord>
                                                   listematchsu17MatchRecordList =
                                                   snapshot.data!;
+
                                               return SingleChildScrollView(
                                                 scrollDirection:
                                                     Axis.horizontal,
@@ -2216,9 +2235,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe1EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -2311,9 +2332,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe2EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -2636,6 +2659,7 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                               List<MatchRecord>
                                                   listematchsu15MatchRecordList =
                                                   snapshot.data!;
+
                                               return SingleChildScrollView(
                                                 scrollDirection:
                                                     Axis.horizontal,
@@ -2746,9 +2770,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe1EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
@@ -2841,9 +2867,11 @@ class _MatchDayWidgetState extends State<MatchDayWidget> {
                                                                           ),
                                                                         );
                                                                       }
+
                                                                       final equipe2EquipesRecord =
                                                                           snapshot
                                                                               .data!;
+
                                                                       return Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,

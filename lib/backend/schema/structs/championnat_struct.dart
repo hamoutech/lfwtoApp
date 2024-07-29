@@ -3,9 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
-import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class ChampionnatStruct extends FFFirebaseStruct {
@@ -29,42 +27,54 @@ class ChampionnatStruct extends FFFirebaseStruct {
   int? _classement;
   int get classement => _classement ?? 0;
   set classement(int? val) => _classement = val;
-  void incrementClassement(int amount) => _classement = classement + amount;
+
+  void incrementClassement(int amount) => classement = classement + amount;
+
   bool hasClassement() => _classement != null;
 
   // "match-joue" field.
   int? _matchJoue;
   int get matchJoue => _matchJoue ?? 0;
   set matchJoue(int? val) => _matchJoue = val;
-  void incrementMatchJoue(int amount) => _matchJoue = matchJoue + amount;
+
+  void incrementMatchJoue(int amount) => matchJoue = matchJoue + amount;
+
   bool hasMatchJoue() => _matchJoue != null;
 
   // "but-pour" field.
   int? _butPour;
   int get butPour => _butPour ?? 0;
   set butPour(int? val) => _butPour = val;
-  void incrementButPour(int amount) => _butPour = butPour + amount;
+
+  void incrementButPour(int amount) => butPour = butPour + amount;
+
   bool hasButPour() => _butPour != null;
 
   // "but-contre" field.
   int? _butContre;
   int get butContre => _butContre ?? 0;
   set butContre(int? val) => _butContre = val;
-  void incrementButContre(int amount) => _butContre = butContre + amount;
+
+  void incrementButContre(int amount) => butContre = butContre + amount;
+
   bool hasButContre() => _butContre != null;
 
   // "diff" field.
   int? _diff;
   int get diff => _diff ?? 0;
   set diff(int? val) => _diff = val;
-  void incrementDiff(int amount) => _diff = diff + amount;
+
+  void incrementDiff(int amount) => diff = diff + amount;
+
   bool hasDiff() => _diff != null;
 
   // "points" field.
   int? _points;
   int get points => _points ?? 0;
   set points(int? val) => _points = val;
-  void incrementPoints(int amount) => _points = points + amount;
+
+  void incrementPoints(int amount) => points = points + amount;
+
   bool hasPoints() => _points != null;
 
   static ChampionnatStruct fromMap(Map<String, dynamic> data) =>

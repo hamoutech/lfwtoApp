@@ -25,6 +25,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
     super.initState();
     _model = createModel(context, () => NotificationsModel());
 
+    _model.switchMatchNotificationValue = true;
+    _model.switchActuNotificationsValue = true;
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -143,8 +145,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                   ],
                                 ),
                                 Switch.adaptive(
-                                  value: _model.switchMatchNotificationValue ??=
-                                      true,
+                                  value: _model.switchMatchNotificationValue!,
                                   onChanged: (newValue) async {
                                     setState(() =>
                                         _model.switchMatchNotificationValue =
@@ -221,8 +222,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                   ],
                                 ),
                                 Switch.adaptive(
-                                  value: _model.switchActuNotificationsValue ??=
-                                      true,
+                                  value: _model.switchActuNotificationsValue!,
                                   onChanged: (newValue) async {
                                     setState(() =>
                                         _model.switchActuNotificationsValue =

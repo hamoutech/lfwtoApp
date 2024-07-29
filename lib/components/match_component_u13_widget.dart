@@ -61,7 +61,9 @@ class _MatchComponentU13WidgetState extends State<MatchComponentU13Widget> {
             ),
           );
         }
+
         final matchInfoContainerMatchRecord = snapshot.data!;
+
         return Container(
           width: 180.0,
           height: MediaQuery.sizeOf(context).height * 0.109,
@@ -117,7 +119,9 @@ class _MatchComponentU13WidgetState extends State<MatchComponentU13Widget> {
                               ),
                             );
                           }
+
                           final equipeAEquipesRecord = snapshot.data!;
+
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -182,7 +186,9 @@ class _MatchComponentU13WidgetState extends State<MatchComponentU13Widget> {
                               ),
                             );
                           }
+
                           final equipeBEquipesRecord = snapshot.data!;
+
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [

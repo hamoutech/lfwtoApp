@@ -86,9 +86,8 @@ class _AppBarLigueWidgetState extends State<AppBarLigueWidget>
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            _model.updatePage(() {
-                              _model.activeMenu = false;
-                            });
+                            _model.activeMenu = false;
+                            _model.updatePage(() {});
                           },
                           child: Icon(
                             Icons.close_sharp,
@@ -107,9 +106,8 @@ class _AppBarLigueWidgetState extends State<AppBarLigueWidget>
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            _model.updatePage(() {
-                              _model.activeMenu = true;
-                            });
+                            _model.activeMenu = true;
+                            _model.updatePage(() {});
                           },
                           child: Icon(
                             Icons.menu,

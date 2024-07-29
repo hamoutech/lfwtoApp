@@ -27,36 +27,42 @@ class EquipesStruct extends FFFirebaseStruct {
   String? _nomEquipe;
   String get nomEquipe => _nomEquipe ?? '';
   set nomEquipe(String? val) => _nomEquipe = val;
+
   bool hasNomEquipe() => _nomEquipe != null;
 
   // "logo" field.
   String? _logo;
   String get logo => _logo ?? '';
   set logo(String? val) => _logo = val;
+
   bool hasLogo() => _logo != null;
 
   // "division" field.
   String? _division;
   String get division => _division ?? '';
   set division(String? val) => _division = val;
+
   bool hasDivision() => _division != null;
 
   // "categorie" field.
   String? _categorie;
   String get categorie => _categorie ?? '';
   set categorie(String? val) => _categorie = val;
+
   bool hasCategorie() => _categorie != null;
 
   // "miniCategorie" field.
   String? _miniCategorie;
   String get miniCategorie => _miniCategorie ?? '';
   set miniCategorie(String? val) => _miniCategorie = val;
+
   bool hasMiniCategorie() => _miniCategorie != null;
 
   // "nameAbreviation" field.
   String? _nameAbreviation;
   String get nameAbreviation => _nameAbreviation ?? '';
   set nameAbreviation(String? val) => _nameAbreviation = val;
+
   bool hasNameAbreviation() => _nameAbreviation != null;
 
   static EquipesStruct fromMap(Map<String, dynamic> data) => EquipesStruct(

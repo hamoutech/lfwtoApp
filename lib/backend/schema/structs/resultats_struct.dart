@@ -3,9 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
-import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class ResultatsStruct extends FFFirebaseStruct {
@@ -21,14 +19,18 @@ class ResultatsStruct extends FFFirebaseStruct {
   int? _scoreTeamA;
   int get scoreTeamA => _scoreTeamA ?? 0;
   set scoreTeamA(int? val) => _scoreTeamA = val;
-  void incrementScoreTeamA(int amount) => _scoreTeamA = scoreTeamA + amount;
+
+  void incrementScoreTeamA(int amount) => scoreTeamA = scoreTeamA + amount;
+
   bool hasScoreTeamA() => _scoreTeamA != null;
 
   // "scoreTeamB" field.
   int? _scoreTeamB;
   int get scoreTeamB => _scoreTeamB ?? 0;
   set scoreTeamB(int? val) => _scoreTeamB = val;
-  void incrementScoreTeamB(int amount) => _scoreTeamB = scoreTeamB + amount;
+
+  void incrementScoreTeamB(int amount) => scoreTeamB = scoreTeamB + amount;
+
   bool hasScoreTeamB() => _scoreTeamB != null;
 
   static ResultatsStruct fromMap(Map<String, dynamic> data) => ResultatsStruct(

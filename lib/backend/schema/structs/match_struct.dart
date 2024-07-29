@@ -3,9 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
-import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class MatchStruct extends FFFirebaseStruct {
@@ -25,24 +23,28 @@ class MatchStruct extends FFFirebaseStruct {
   String? _journee;
   String get journee => _journee ?? '';
   set journee(String? val) => _journee = val;
+
   bool hasJournee() => _journee != null;
 
   // "stade" field.
   String? _stade;
   String get stade => _stade ?? '';
   set stade(String? val) => _stade = val;
+
   bool hasStade() => _stade != null;
 
   // "heure" field.
   String? _heure;
   String get heure => _heure ?? '';
   set heure(String? val) => _heure = val;
+
   bool hasHeure() => _heure != null;
 
   // "dateMatch" field.
   DateTime? _dateMatch;
   DateTime? get dateMatch => _dateMatch;
   set dateMatch(DateTime? val) => _dateMatch = val;
+
   bool hasDateMatch() => _dateMatch != null;
 
   static MatchStruct fromMap(Map<String, dynamic> data) => MatchStruct(

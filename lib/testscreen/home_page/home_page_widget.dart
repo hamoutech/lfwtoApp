@@ -31,9 +31,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      setState(() {
-        FFAppState().currentDate = functions.getDayDate();
-      });
+      FFAppState().currentDate = functions.getDayDate();
+      setState(() {});
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -87,6 +86,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 final stackPubsRecord = stackPubsRecordList.isNotEmpty
                     ? stackPubsRecordList.first
                     : null;
+
                 return Stack(
                   children: [
                     Container(
@@ -163,6 +163,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     List<ArticlesRecord>
                                         slideArticleArticlesRecordList =
                                         snapshot.data!;
+
                                     return SizedBox(
                                       width: double.infinity,
                                       height: 500.0,
@@ -548,6 +549,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             List<BulletinsRecord>
                                                 rowBulletinsRecordList =
                                                 snapshot.data!;
+
                                             return SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
@@ -947,6 +949,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             List<PvDisciplineRecord>
                                                 rowPvDisciplineRecordList =
                                                 snapshot.data!;
+
                                             return SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
@@ -1320,6 +1323,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 List<ArticlesRecord>
                                     containerArticlesRecordList =
                                     snapshot.data!;
+
                                 return Container(
                                   decoration: const BoxDecoration(),
                                   child: SingleChildScrollView(
@@ -1362,6 +1366,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   List<ArticlesRecord>
                                                       containerArticlesRecordList =
                                                       snapshot.data!;
+
                                                   return Container(
                                                     width: MediaQuery.sizeOf(
                                                                 context)
@@ -1374,6 +1379,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             containerArticlesRecordList
                                                                 .map((e) => e)
                                                                 .toList();
+
                                                         return ListView.builder(
                                                           padding:
                                                               EdgeInsets.zero,
@@ -1602,6 +1608,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           .toList()
                                                           .take(2)
                                                           .toList();
+
                                                   return ListView.builder(
                                                     padding: EdgeInsets.zero,
                                                     primary: false,
@@ -1854,13 +1861,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 highlightColor:
                                                     Colors.transparent,
                                                 onTap: () async {
-                                                  FFAppState().update(() {
-                                                    FFAppState().viewmore =
-                                                        true;
-                                                  });
-                                                  setState(() {
-                                                    _model.viewmore = true;
-                                                  });
+                                                  FFAppState().viewmore = true;
+                                                  FFAppState().update(() {});
+                                                  _model.viewmore = true;
+                                                  setState(() {});
                                                 },
                                                 child: Text(
                                                   FFLocalizations.of(context)

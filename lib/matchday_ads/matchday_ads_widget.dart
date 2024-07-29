@@ -52,80 +52,84 @@ class _MatchdayAdsWidgetState extends State<MatchdayAdsWidget> {
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryText,
-            body: StreamBuilder<List<PubsRecord>>(
-              stream: queryPubsRecord(
-                singleRecord: true,
-              ),
-              builder: (context, snapshot) {
-                // Customize what your widget looks like when it's loading.
-                if (!snapshot.hasData) {
-                  return const Center(
-                    child: SizedBox(
-                      width: 50.0,
-                      height: 50.0,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0xFF265631),
+            body: SafeArea(
+              top: true,
+              child: StreamBuilder<List<PubsRecord>>(
+                stream: queryPubsRecord(
+                  singleRecord: true,
+                ),
+                builder: (context, snapshot) {
+                  // Customize what your widget looks like when it's loading.
+                  if (!snapshot.hasData) {
+                    return const Center(
+                      child: SizedBox(
+                        width: 50.0,
+                        height: 50.0,
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            Color(0xFF265631),
+                          ),
                         ),
+                      ),
+                    );
+                  }
+                  List<PubsRecord> containerPubsRecordList = snapshot.data!;
+                  final containerPubsRecord = containerPubsRecordList.isNotEmpty
+                      ? containerPubsRecordList.first
+                      : null;
+
+                  return Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: Image.network(
+                          containerPubsRecord!.matchDayAds,
+                        ).image,
+                      ),
+                    ),
+                    child: Align(
+                      alignment: const AlignmentDirectional(1.0, -1.0),
+                      child: Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 15.0, 15.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: Colors.black,
+                              borderRadius: 20.0,
+                              borderWidth: 1.0,
+                              buttonSize: 36.0,
+                              icon: const Icon(
+                                Icons.close,
+                                color: Colors.black,
+                                size: 18.0,
+                              ),
+                              onPressed: () async {
+                                if (Navigator.of(context).canPop()) {
+                                  context.pop();
+                                }
+                                context.pushNamed(
+                                  'matchDayLive',
+                                  queryParameters: {
+                                    'link': serializeParam(
+                                      widget.link,
+                                      ParamType.String,
+                                    ),
+                                    'youtubeLink': serializeParam(
+                                      widget.youtubelink,
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   );
-                }
-                List<PubsRecord> containerPubsRecordList = snapshot.data!;
-                final containerPubsRecord = containerPubsRecordList.isNotEmpty
-                    ? containerPubsRecordList.first
-                    : null;
-                return Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.network(
-                        containerPubsRecord!.matchDayAds,
-                      ).image,
-                    ),
-                  ),
-                  child: Align(
-                    alignment: const AlignmentDirectional(1.0, -1.0),
-                    child: Stack(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 15.0, 15.0, 0.0),
-                          child: FlutterFlowIconButton(
-                            borderColor: Colors.black,
-                            borderRadius: 20.0,
-                            borderWidth: 1.0,
-                            buttonSize: 36.0,
-                            icon: const Icon(
-                              Icons.close,
-                              color: Colors.black,
-                              size: 18.0,
-                            ),
-                            onPressed: () async {
-                              if (Navigator.of(context).canPop()) {
-                                context.pop();
-                              }
-                              context.pushNamed(
-                                'matchDayLive',
-                                queryParameters: {
-                                  'link': serializeParam(
-                                    widget.link,
-                                    ParamType.String,
-                                  ),
-                                  'youtubeLink': serializeParam(
-                                    widget.youtubelink,
-                                    ParamType.String,
-                                  ),
-                                }.withoutNulls,
-                              );
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
+                },
+              ),
             ),
           ),
         ));

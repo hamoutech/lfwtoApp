@@ -86,6 +86,7 @@ class _PartenaireOfficielsWidgetState extends State<PartenaireOfficielsWidget> {
                                 List<PartenairesRecord>
                                     gridViewPartenairesRecordList =
                                     snapshot.data!;
+
                                 return GridView.builder(
                                   padding: const EdgeInsets.fromLTRB(
                                     0,

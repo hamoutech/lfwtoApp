@@ -19,12 +19,14 @@ class ArticleImageStruct extends FFFirebaseStruct {
   String? _path;
   String get path => _path ?? '';
   set path(String? val) => _path = val;
+
   bool hasPath() => _path != null;
 
   // "hash" field.
   String? _hash;
   String get hash => _hash ?? '';
   set hash(String? val) => _hash = val;
+
   bool hasHash() => _hash != null;
 
   static ArticleImageStruct fromMap(Map<String, dynamic> data) =>

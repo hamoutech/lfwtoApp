@@ -353,6 +353,7 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                 }
                                 List<MatchRecord> containerMatchRecordList =
                                     snapshot.data!;
+
                                 return Container(
                                   width: double.infinity,
                                   height: double.infinity,
@@ -439,6 +440,7 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                         containerMatchRecordList
                                                             .map((e) => e)
                                                             .toList();
+
                                                     return ListView.builder(
                                                       padding: EdgeInsets.zero,
                                                       primary: false,
@@ -533,8 +535,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                               ),
                                                                             );
                                                                           }
+
                                                                           final containerEquipesRecord =
                                                                               snapshot.data!;
+
                                                                           return Container(
                                                                             width:
                                                                                 MediaQuery.sizeOf(context).width * 0.3,
@@ -661,8 +665,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                             ),
                                                                           );
                                                                         }
+
                                                                         final containerEquipesRecord =
                                                                             snapshot.data!;
+
                                                                         return Container(
                                                                           width:
                                                                               MediaQuery.sizeOf(context).width * 0.3,
@@ -783,6 +789,7 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                         containerMatchRecordList
                                                             .map((e) => e)
                                                             .toList();
+
                                                     return ListView.builder(
                                                       padding: EdgeInsets.zero,
                                                       primary: false,
@@ -877,8 +884,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                               ),
                                                                             );
                                                                           }
+
                                                                           final containerEquipesRecord =
                                                                               snapshot.data!;
+
                                                                           return Container(
                                                                             width:
                                                                                 MediaQuery.sizeOf(context).width * 0.3,
@@ -1005,8 +1014,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                             ),
                                                                           );
                                                                         }
+
                                                                         final containerEquipesRecord =
                                                                             snapshot.data!;
+
                                                                         return Container(
                                                                           width:
                                                                               MediaQuery.sizeOf(context).width * 0.3,
@@ -1128,6 +1139,7 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                         containerMatchRecordList
                                                             .map((e) => e)
                                                             .toList();
+
                                                     return ListView.builder(
                                                       padding: EdgeInsets.zero,
                                                       shrinkWrap: true,
@@ -1222,8 +1234,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                               ),
                                                                             );
                                                                           }
+
                                                                           final equipe1EquipesRecord =
                                                                               snapshot.data!;
+
                                                                           return Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
@@ -1343,8 +1357,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                               ),
                                                                             );
                                                                           }
+
                                                                           final equipe2EquipesRecord =
                                                                               snapshot.data!;
+
                                                                           return Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
@@ -1457,6 +1473,7 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                         containerMatchRecordList
                                                             .map((e) => e)
                                                             .toList();
+
                                                     return ListView.builder(
                                                       padding: EdgeInsets.zero,
                                                       primary: false,
@@ -1552,8 +1569,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                               ),
                                                                             );
                                                                           }
+
                                                                           final equipe1EquipesRecord =
                                                                               snapshot.data!;
+
                                                                           return Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
@@ -1673,8 +1692,10 @@ class _ResultatsWidgetState extends State<ResultatsWidget> {
                                                                               ),
                                                                             );
                                                                           }
+
                                                                           final equipe2EquipesRecord =
                                                                               snapshot.data!;
+
                                                                           return Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,

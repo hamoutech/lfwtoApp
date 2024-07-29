@@ -1011,6 +1011,7 @@ class _ChampionnatClassementWidgetState
                                                   : _model.groupesEcolesValue,
                                               'GROUPE 01',
                                             ).maybeHandleOverflow(maxChars: 12),
+                                            minFontSize: 8.0,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -1019,7 +1020,6 @@ class _ChampionnatClassementWidgetState
                                                   fontSize: 11.0,
                                                   letterSpacing: 0.0,
                                                 ),
-                                            minFontSize: 8.0,
                                           ),
                                       ],
                                     ),
@@ -1425,6 +1425,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listHonneurSeniorEquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -1537,6 +1538,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listHonneurU19EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -1649,6 +1651,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listHonneurU17EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -1761,6 +1764,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listHonneurU15EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -1873,6 +1877,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listHonneurU13EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -1986,6 +1991,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listPreHonneurSeniorEquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2099,6 +2105,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listPreHonneurU19EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2212,6 +2219,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listPreHonneurU17EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2325,6 +2333,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listPreHonneurU15EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2437,6 +2446,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listPreHonneurU13EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2552,6 +2562,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listJeunesU19EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2667,6 +2678,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listJeunesU17EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2782,6 +2794,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listJeunesU15EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2897,6 +2910,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listJeunesU13EquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -2967,8 +2981,8 @@ class _ChampionnatClassementWidgetState
                                                             equipesRecord
                                                                 .where(
                                                                   'division',
-                                                                  isEqualTo: _model
-                                                                      .divisionValue,
+                                                                  isEqualTo:
+                                                                      'ÉCOLES',
                                                                 )
                                                                 .where(
                                                                   'groupe',
@@ -2976,11 +2990,11 @@ class _ChampionnatClassementWidgetState
                                                                       .groupesEcolesValue,
                                                                 )
                                                                 .orderBy(
-                                                                    'champ_info.points',
+                                                                    'champinfo13.points',
                                                                     descending:
                                                                         true)
                                                                 .orderBy(
-                                                                    'champ_info.diff',
+                                                                    'champinfo13.diff',
                                                                     descending:
                                                                         true),
                                                       ),
@@ -3007,6 +3021,7 @@ class _ChampionnatClassementWidgetState
                                                         List<EquipesRecord>
                                                             listEcoleEquipesRecordList =
                                                             snapshot.data!;
+
                                                         return ListView
                                                             .separated(
                                                           padding: const EdgeInsets
@@ -3069,11 +3084,115 @@ class _ChampionnatClassementWidgetState
                                                       },
                                                     );
                                                   } else {
-                                                    return Container(
-                                                      width: 100.0,
-                                                      height: 100.0,
-                                                      decoration:
-                                                          const BoxDecoration(),
+                                                    return StreamBuilder<
+                                                        List<EquipesRecord>>(
+                                                      stream:
+                                                          queryEquipesRecord(
+                                                        queryBuilder: (equipesRecord) =>
+                                                            equipesRecord
+                                                                .where(
+                                                                  'division',
+                                                                  isEqualTo:
+                                                                      'ÉCOLES',
+                                                                )
+                                                                .where(
+                                                                  'groupe',
+                                                                  isEqualTo: _model
+                                                                      .groupesEcolesValue,
+                                                                )
+                                                                .orderBy(
+                                                                    'champ_info.points',
+                                                                    descending:
+                                                                        true)
+                                                                .orderBy(
+                                                                    'champ_info.diff',
+                                                                    descending:
+                                                                        true),
+                                                      ),
+                                                      builder:
+                                                          (context, snapshot) {
+                                                        // Customize what your widget looks like when it's loading.
+                                                        if (!snapshot.hasData) {
+                                                          return const Center(
+                                                            child: SizedBox(
+                                                              width: 50.0,
+                                                              height: 50.0,
+                                                              child:
+                                                                  CircularProgressIndicator(
+                                                                valueColor:
+                                                                    AlwaysStoppedAnimation<
+                                                                        Color>(
+                                                                  Color(
+                                                                      0xFF265631),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          );
+                                                        }
+                                                        List<EquipesRecord>
+                                                            listEcoleEquipesRecordList =
+                                                            snapshot.data!;
+
+                                                        return ListView
+                                                            .separated(
+                                                          padding: const EdgeInsets
+                                                              .fromLTRB(
+                                                            0,
+                                                            1.0,
+                                                            0,
+                                                            15.0,
+                                                          ),
+                                                          primary: false,
+                                                          shrinkWrap: true,
+                                                          scrollDirection:
+                                                              Axis.vertical,
+                                                          itemCount:
+                                                              listEcoleEquipesRecordList
+                                                                  .length,
+                                                          separatorBuilder: (_,
+                                                                  __) =>
+                                                              const SizedBox(
+                                                                  height: 0.2),
+                                                          itemBuilder: (context,
+                                                              listEcoleIndex) {
+                                                            final listEcoleEquipesRecord =
+                                                                listEcoleEquipesRecordList[
+                                                                    listEcoleIndex];
+                                                            return EquipeWidget(
+                                                              key: Key(
+                                                                  'Key47y_${listEcoleIndex}_of_${listEcoleEquipesRecordList.length}'),
+                                                              index:
+                                                                  listEcoleIndex,
+                                                              logo:
+                                                                  listEcoleEquipesRecord
+                                                                      .logo,
+                                                              nomequipe:
+                                                                  listEcoleEquipesRecord
+                                                                      .nomEquipe,
+                                                              point:
+                                                                  listEcoleEquipesRecord
+                                                                      .champinfo13
+                                                                      .points,
+                                                              matchjoues:
+                                                                  listEcoleEquipesRecord
+                                                                      .champinfo13
+                                                                      .matchJoue,
+                                                              butspour:
+                                                                  listEcoleEquipesRecord
+                                                                      .champinfo13
+                                                                      .butPour,
+                                                              butscontre:
+                                                                  listEcoleEquipesRecord
+                                                                      .champinfo13
+                                                                      .butContre,
+                                                              differnece:
+                                                                  listEcoleEquipesRecord
+                                                                      .champinfo13
+                                                                      .diff,
+                                                            );
+                                                          },
+                                                        );
+                                                      },
                                                     );
                                                   }
                                                 },
