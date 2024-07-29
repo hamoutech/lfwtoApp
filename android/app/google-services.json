@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "338029020073",
+    "firebase_url": "https://wilaya-soccer-project-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "wilaya-soccer-project",
+    "storage_bucket": "wilaya-soccer-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338029020073:android:ddcee536dc90c86af37ab8",
+        "android_client_info": {
+          "package_name": "com.mycompany.responsivedashboard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_7BjMZ4hK7b3WDlhq8Brcof72zA0X7Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338029020073:android:2e1bf391468099a3f37ab8",
+        "android_client_info": {
+          "package_name": "com.mycompany.wilayaliguesoccer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_7BjMZ4hK7b3WDlhq8Brcof72zA0X7Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
